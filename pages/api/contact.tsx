@@ -1,16 +1,14 @@
 import sgMail from "@sendgrid/mail";
 import { NextApiRequest, NextApiResponse } from "next";
 
-sgMail.setApiKey(
-  "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"
-);
+sgMail.setApiKey(process.env.EMAIL_API_KEY);
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { email, subject, message, name } = req.body;
   console.log(email);
   const msg = {
-    to: "luisotaviomgr1@hotmail.com",
+    to: "luisotaviomgr1@gmail.com",
     from: email,
     subject,
     name,
