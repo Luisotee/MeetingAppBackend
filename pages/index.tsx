@@ -11,18 +11,22 @@ export default function Home({ meetings }: any) {
   const date = new Date();
   const dateNow = moment(date).format("YYYY-MM-DD");
 
-  const email = {
-    email: "luisotaviomgr1@hotmail.com",
+  const emailContent = {
+    email: [],
     subject: "Oii",
     message: "tchau",
     name: "eumesmo",
   };
-
-  sendMail(email);
+  console.log(meetings);
 
   meetings.map((meeting: any) => {
     if (meeting.limitData == dateNow) {
-      //console.log(meeting);
+      let emails = [];
+      emails = meeting.meetingParticipants.split(";");
+      /*for (let i = 0; i < emails.length; i++) {
+        emailContent.email = emails[i];
+        sendMail(emailContent);
+      }*/
     }
   });
 }

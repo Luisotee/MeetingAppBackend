@@ -15,12 +15,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     },
   });
 
-  send();
+  //send();
+
+  //console.log(req.body);
 
   async function send() {
     const result = await transporter.sendMail({
       from: "meetingappupxaf@gmail.com",
-      to: "luisotaviomgr1@hotmail.com",
+      to: req.body.email,
       subject: "Hello World",
       text: "Hello World",
     });
