@@ -18,8 +18,7 @@ export default function Home({ meetings }: any) {
     name: "eumesmo",
   };
 
-  const a = sendMail(email);
-  console.log("??AAAAAA = ", a);
+  sendMail(email);
 
   meetings.map((meeting: any) => {
     if (meeting.limitData == dateNow) {
