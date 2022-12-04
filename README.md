@@ -1,3 +1,9 @@
+NOME: Luís Otávio RA: 190645 Desenvolvimento Mobile e UPx
+
+Funcionalidades: Login, armazenamento das meetings na nuvem, home que lista as meetings já feitas em ordem cronológica, WiP
+
+Scheduler
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
